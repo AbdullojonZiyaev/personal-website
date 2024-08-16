@@ -725,144 +725,128 @@
 
 
 
-      <!--
-        - #PORTFOLIO
-      -->
+<!-- #PORTFOLIO -->
+<article class="portfolio" data-page="portfolio">
 
-      <article class="portfolio" data-page="portfolio">
+  <header>
+    <h2 class="h2 article-title">Portfolio</h2>
+  </header>
 
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
+  <section class="projects">
 
-        <section class="projects">
+    <ul class="filter-list">
 
-          <ul class="filter-list">
+      <li class="filter-item">
+        <button class="active" data-filter-btn>All</button>
+      </li>
 
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
+      <li class="filter-item">
+        <button data-filter-btn>Web development</button>
+      </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
+      <li class="filter-item">
+        <button data-filter-btn>AI</button>
+      </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>AI</button>
-            </li>
+    </ul>
 
-          </ul>
+    <div class="filter-select-box">
 
-          <div class="filter-select-box">
+      <button class="filter-select" data-select>
 
-            <button class="filter-select" data-select>
+        <div class="select-value" data-select-value>Select category</div>
 
-              <div class="select-value" data-select-value>Select category</div>
+        <div class="select-icon">
+          <ion-icon name="chevron-down"></ion-icon>
+        </div>
 
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
+      </button>
 
-            </button>
+      <ul class="select-list">
 
-            <ul class="select-list">
+        <li class="select-item">
+          <button data-select-item>All</button>
+        </li>
 
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
+        <li class="select-item">
+          <button data-select-item>AI</button>
+        </li>
 
-              <li class="select-item">
-                <button data-select-item>AI</button>
-              </li>
+        <li class="select-item">
+          <button data-select-item>Web development</button>
+        </li>
 
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
+      </ul>
 
-            </ul>
+    </div>
 
-          </div>
+    <ul class="project-list">
 
-          <ul class="project-list">
+      <li class="project-item active" data-filter-item data-category="AI">
+        <div class="project-header">
+          <figure class="project-img">
+            <img src="./assets/images/genetic-algorithm.webp" alt="genetic-algorithm" loading="lazy">
+          </figure>
+          <h3 class="project-title">Genetic Algorithm</h3>
+          <button class="toggle-description">
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="project-description">
+          <p>This project implements a genetic algorithm to solve optimization problems. It mimics the process of natural selection to find the best solution among a population of candidates.</p>
+        </div>
+      </li>      
 
-            
-            <li class="project-item  active" data-filter-item data-category="AI">
-              <a href="#">
+      <li class="project-item active" data-filter-item data-category="web development">
+        <div class="project-header">
+          <figure class="project-img">
+            <img src="./assets/images/login-system.jpg" alt="login-system" loading="lazy">
+          </figure>
+          <h3 class="project-title">Login System</h3>
+          <button class="toggle-description">
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="project-description">
+          <p>A secure login system developed using modern web technologies. It includes features like user authentication, password encryption, and session management.</p>
+        </div>
+      </li>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+      <li class="project-item active" data-filter-item data-category="web development">
+        <div class="project-header">
+          <figure class="project-img">
+            <img src="./assets/images/HRM-system.png" alt="HRM-system" loading="lazy">
+          </figure>
+          <h3 class="project-title">Human Resource Management System</h3>
+          <button class="toggle-description">
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="project-description">
+          <p>A comprehensive HRM system designed to manage employee data, track performance, and facilitate payroll processing. Built with Angular and integrated with backend services.</p>
+        </div>
+      </li>
 
-                  <img src="./assets/images/genetic-algorithm.webp" alt="login-system" loading="lazy">
-                </figure>
+      <li class="project-item active" data-filter-item data-category="web development">
+        <div class="project-header">
+          <figure class="project-img">
+            <img src="./assets/images/ecotaxi.png" alt="EcoTaxi" loading="lazy">
+          </figure>
+          <h3 class="project-title">EcoTaxi</h3>
+          <button class="toggle-description">
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="project-description">
+          <p>EcoTaxi is a sustainable transportation service platform that connects users with eco-friendly taxis. The platform is built with a responsive design and includes real-time tracking and booking features.</p>
+        </div>
+      </li>
 
-                <h3 class="project-title">genetic-algorithm</h3>
+    </ul>
 
-                <p class="project-category">AI</p>
+  </section>
 
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/login-system.jpg" alt="login-system" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">login-system</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/HRM-system.png" alt="HRM-system" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Human Resource Management System</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://ecotaxi.tj/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/ecotaxi.png" alt="HRM-system" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">EcoTaxi</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
+</article>
 
 
 

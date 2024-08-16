@@ -64,54 +64,66 @@ const filterBtn = document.querySelectorAll("[data-filter-btn]");
 select.addEventListener("click", function () { elementToggleFunc(this); });
 
 // add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
+selectItems.forEach(item => {
+  item.addEventListener("click", function () {
+    let selectedValue = this.innerText.trim().toLowerCase();
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
-
   });
-}
+});
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+  console.log(`Filtering by: ${selectedValue}`); // Log selected value
+  filterItems.forEach(item => {
+    const category = item.dataset.category.toLowerCase().trim();
+    console.log(`Item category: ${category}`); // Log item category
+    if (selectedValue === "all" || selectedValue === category) {
+      item.classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      item.classList.remove("active");
     }
-
-  }
-
+  });
 }
+
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
+filterBtn.forEach(btn => {
+  btn.addEventListener("click", function () {
+    let selectedValue = this.innerText.trim().toLowerCase();
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
 
     lastClickedBtn.classList.remove("active");
     this.classList.add("active");
     lastClickedBtn = this;
-
   });
+});
 
-}
+document.querySelectorAll('.toggle-description').forEach(button => {
+  button.addEventListener('click', function() {
+    const projectItem = this.closest('.project-item');
+    const description = projectItem.querySelector('.project-description');
+    const icon = this.querySelector('ion-icon');
+
+    // Toggle project item size
+    projectItem.classList.toggle('expanded');
+
+    // Toggle project description
+    if (description.style.display === 'block') {
+      description.style.display = 'none';
+      icon.name = 'chevron-down-outline';
+    } else {
+      description.style.display = 'block';
+      icon.name = 'chevron-up-outline';
+    }
+  });
+});
 
 
 

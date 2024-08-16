@@ -939,8 +939,37 @@ main {
   margin-bottom: 10px;
 }
 
-.project-item { display: none; }
-
+  .project-item {
+    display: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .project-item.expanded {
+    transform: scale(1.1) !important; /* Increase the size on expansion */
+    border: 1px solid #8c8c8c;
+    border-radius: 10%;
+    padding: 0.5rem;
+  }
+  
+  .project-description {
+    display: none;
+    padding: 1em 0;
+    font-size: 0.9em;
+    color: #8c8c8c;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-description.show {
+    display: block;
+  }
+  
+  .project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
 .project-item.active {
   display: block;
   animation: scaleUp 0.25s ease forwards;
@@ -1026,7 +1055,39 @@ main {
   font-weight: var(--fw-300);
 }
 
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.project-header figure {
+  margin: 0;
+  flex: 1;
+}
+
+.project-title {
+  margin: 0 1em;
+  flex: 2;
+}
+
+.toggle-description {
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.project-description {
+  display: none;
+  padding: 1em 0;
+  font-size: 0.9em;
+  color: #8c8c8c;
+}
+
+ion-icon {
+  color: lightslategray;
+}
 
 
 
