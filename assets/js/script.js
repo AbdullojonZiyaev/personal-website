@@ -105,25 +105,26 @@ filterBtn.forEach(btn => {
   });
 });
 
-document.querySelectorAll('.toggle-description').forEach(button => {
-  button.addEventListener('click', function() {
-    const projectItem = this.closest('.project-item');
-    const description = projectItem.querySelector('.project-description');
-    const icon = this.querySelector('ion-icon');
+document.querySelectorAll('.project-item').forEach(item => {
+  item.addEventListener('click', function() {
+    const description = this.querySelector('.project-description');
+    
+    // Toggle expanded class
+    this.classList.toggle('expanded');
 
-    // Toggle project item size
-    projectItem.classList.toggle('expanded');
-
-    // Toggle project description
+    // Toggle project description visibility
     if (description.style.display === 'block') {
       description.style.display = 'none';
-      icon.name = 'chevron-down-outline';
+      description.style.opacity = '0';
     } else {
       description.style.display = 'block';
-      icon.name = 'chevron-up-outline';
+      setTimeout(() => {
+        description.style.opacity = '1';
+      }, 150); // Small delay for smoother opacity transition
     }
   });
 });
+
 
 
 
