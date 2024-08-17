@@ -944,7 +944,7 @@ main {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
+  transition: transform 10s cubic-bezier(.41,.34,.5,.59), box-shadow 0.4s ease-in-out !important;
   overflow: hidden;
 }
 
@@ -959,7 +959,7 @@ main {
   font-size: 0.9em;
   color: #8c8c8c;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.4s ease;
 }
 .project-description.show {
   display: block;
