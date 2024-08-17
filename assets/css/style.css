@@ -949,7 +949,6 @@ main {
 }
 
 .project-item.expanded {
-  transform: scale(1.1) !important;
   box-shadow: 0 4px 20px rgba(59, 59, 59, 0.2);
 }
   
