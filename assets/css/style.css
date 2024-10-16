@@ -939,6 +939,7 @@ ion-icon:hover{
   cursor: pointer;
   transition: transform 10s cubic-bezier(.41,.34,.5,.59), box-shadow 0.4s ease-in-out !important;
   overflow: hidden;
+  display: none;
 }
 
 .project-item.expanded {
